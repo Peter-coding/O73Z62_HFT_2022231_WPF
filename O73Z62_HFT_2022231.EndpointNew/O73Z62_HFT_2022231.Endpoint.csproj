@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\O73Z62_HFT_2022231.Logic\O73Z62_HFT_2022231.Logic.csproj" />
+    <ProjectReference Include="..\O73Z62_HFT_2022231.Models\O73Z62_HFT_2022231.Models.csproj" />
+    <ProjectReference Include="..\O73Z62_HFT_2022231.Repository\O73Z62_HFT_2022231.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
