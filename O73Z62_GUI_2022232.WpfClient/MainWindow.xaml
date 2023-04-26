@@ -5,28 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:O73Z62_GUI_2022232.WpfClient"
         mc:Ignorable="d"
-        Title="Car Editor" Height="450" Width="800">
-    <Window.DataContext>
-        <local:MainWindowViewModel />
-    </Window.DataContext>
+        Title="Luxury Car Shop" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Label Content="{Binding Name}"/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <StackPanel Grid.Column="1">
-            <Button Content="Create Car" Command="{Binding CreateCarCommand}" Margin="10" Padding="10"/>
-            <Button Content="Delete Car" Command="{Binding DeleteCarCommand}" Margin="10" Padding="10"/>
-            <Button Content="Update Car" Command="{Binding UpateCarCommand}" Margin="10" Padding="10"/>
-        </StackPanel>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Companies" Grid.Column="1" Grid.Row="0" Click="CompaniesPageClick"></Button>
+        <Button Content="Cars" Grid.Column="2" Grid.Row="0" Click="CarsPageClick"></Button>
+        <Button x:Name="btn1" Content="Renters" Grid.Column="3" Grid.Row="0" Click="RentersPageClick"></Button>
+        <Button Content="Exit" Grid.Column="4" Grid.Row="0"></Button>
+        <Frame x:Name="Main" Grid.Row="1" Grid.ColumnSpan="5" NavigationUIVisibility="Hidden"/>
     </Grid>
 
    

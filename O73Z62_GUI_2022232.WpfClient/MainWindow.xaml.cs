@@ -24,5 +24,20 @@ namespace O73Z62_GUI_2022232.WpfClient
         {
             InitializeComponent();
         }
+
+        private void CarsPageClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new CarsPage();
+
+        }
+
+        private void CompaniesPageClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new CompaniesPage();
+        }
+        private void RentersPageClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new RentersPage();
+        }
     }
 }
